@@ -1,5 +1,7 @@
 # laravel-elixir-env
 
+[![NPM version][npm-image]][npm-url]
+
 Use .env variables in your Javascript with Laravel Elixir. 
 Currently supports Webpack.
 
@@ -44,3 +46,7 @@ Don't forget to recompile on all your environments.
 ## License
 
 Laravel-elixir-env is licensed under [The MIT License (MIT)](LICENSE.md). 
+
+
+[npm-url]: https://www.npmjs.com/package/laravel-elixir-env
+[npm-image]: https://badge.fury.io/js/laravel-elixir-env.svg
