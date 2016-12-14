@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Use .env variables in Javascript with Laravel Elixir",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appstract/laravel-elixir-env"
+  },
   "keywords": [
     "Laravel",
     "Elixir",
