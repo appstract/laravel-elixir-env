@@ -10,13 +10,12 @@ let envEntries = require('dotenv').config({ silent: true, path: envFile });
 if(Elixir) {
 
 	try {
-
-    	const webpack = require('laravel-elixir-webpack-official');
+		const webpack = require('laravel-elixir-webpack-official');
 
 
 		Elixir.webpack.mergeConfig({
 		    plugins: [
-		        new InlineEnviromentVariablesPlugin(envEntries)
+			new InlineEnviromentVariablesPlugin(envEntries)
 		    ]
 		});
 
