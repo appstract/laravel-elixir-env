@@ -1,0 +1,21 @@
+{
+  "name": "laravel-elixir-env",
+  "version": "0.0.1",
+  "description": "Use .env variables in Javascript with Laravel Elixir",
+  "main": "index.js",
+  "keywords": [
+    "Laravel",
+    "Elixir",
+    "env",
+    "dotenv",
+    "javascript",
+    "webpack",
+    "variables"
+  ],
+  "author": "Appstract",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "inline-environment-variables-webpack-plugin": "^1.1.0"
+  }
+}
