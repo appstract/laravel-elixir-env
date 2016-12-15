@@ -15,7 +15,6 @@ if(Elixir) {
                 new InlineEnviromentVariablesPlugin(envEntries)
             ]
         });
-
     }
     catch (e) {
         gulpUtil.PluginError({

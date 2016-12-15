@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url]
 
-Use .env variables in your Javascript with Laravel Elixir. 
+Use .env variables in your Javascript files with Laravel Elixir. 
 Currently supports Webpack.
 
 
@@ -41,7 +41,11 @@ Now you can access your variables in all the scripts that are packaged with Webp
 process.env.VAR_NAME
 ```
 
-Don't forget to recompile on all your environments. 
+Be careful with sensitive variables that can hold private information. Don't forget to recompile on all your environments. 
+
+If you like this, please star on [GitHub](https://github.com/appstract/laravel-elixir-env)!
+
+Issues and Pull Requests welcome.
 
 ## License
 
