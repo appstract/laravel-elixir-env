@@ -1,3 +1,5 @@
+"use strict";
+
 const gulpUtil = require('gulp-util');
 const InlineEnviromentVariablesPlugin = require('inline-environment-variables-webpack-plugin');
 
