@@ -1,34 +1,57 @@
-"use strict";
+'use strict';
 
 const gulpUtil = require('gulp-util');
+const fs = require('fs');
 const InlineEnviromentVariablesPlugin = require('inline-environment-variables-webpack-plugin');
 
-const envFile = './.env';
+let config = {
+    silent: false,
+    path: './.env'
+};
 
-let envEntries = require('dotenv').config({ silent: true, path: envFile });
+module.exports = {
 
-if(Elixir) {
+    config: function (options = {}) {
+        config = Object.assign(config, options);
+        this.execute();
+    },
 
-    try {
-        const webpack = require('laravel-elixir-webpack-official');
+    execute: function () {
 
-        Elixir.webpack.mergeConfig({
-            plugins: [
-                new InlineEnviromentVariablesPlugin(envEntries)
-            ]
-        });
+        if(Elixir) {
+            try {
+                if (fs.existsSync(config.path)) {
+                    console.log('found ' + config.path);
+
+                    const webpack = require('laravel-elixir-webpack-official');
+                    let envEntries = require('dotenv').config(config);
+
+                    Elixir.webpack.mergeConfig({
+                        plugins: [
+                            new InlineEnviromentVariablesPlugin(envEntries)
+                        ]
+                    });
+                }
+                else{
+                    console.log(config.path + ' not found');
+                }
+            }
+            catch (e) {
+                gulpUtil.PluginError({
+                    plugin: 'laravel-elixir-env',
+                    message: 'Currently only webpack is supported.'
+                });
+            }
+        }
+        else {
+            gulpUtil.PluginError({
+                plugin: 'laravel-elixir-env',
+                message: 'Please include laravel-elixir-env after Laravel Elixir.'
+            });
+        }
+
     }
-    catch (e) {
-        gulpUtil.PluginError({
-            plugin: 'laravel-elixir-env',
-            message: 'Currently only webpack is supported.'
-        });
-    }
 
-}
-else {
-    gulpUtil.PluginError({
-        plugin: 'laravel-elixir-env',
-        message: 'Please include laravel-elixir-env after Elixir.'
-    });
-}
+};
+
+module.exports.load = module.exports.execute();
