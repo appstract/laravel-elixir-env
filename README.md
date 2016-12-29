@@ -41,6 +41,12 @@ Now you can access your variables in all the scripts that are packaged with Webp
 process.env.VAR_NAME
 ```
 
+Optionally, you can set the path of the default .env file or set any [dotenv](https://www.npmjs.com/package/dotenv#options) configuration option like so:
+
+```javascript 
+require('laravel-elixir-env').config({ path: 'my-folder/.env' });
+```
+
 Be careful with sensitive variables that can hold private information. Don't forget to recompile on all your environments. 
 
 If you like this, please star on [GitHub](https://github.com/appstract/laravel-elixir-env)!
