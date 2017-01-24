@@ -17,7 +17,10 @@ module.exports = {
     },
 
     execute: function () {
-
+        //allow for casing to be consistent with documentation
+        if(typeof elixir !== "undefined" && typeof Elixir === "undefined"){
+            var Elixir = elixir;
+        }
         if(Elixir) {
             try {
                 if (fs.existsSync(config.path)) {
@@ -37,14 +40,14 @@ module.exports = {
                 }
             }
             catch (e) {
-                gulpUtil.PluginError({
+                new gulpUtil.PluginError({
                     plugin: 'laravel-elixir-env',
                     message: 'Currently only webpack is supported.'
                 });
             }
         }
         else {
-            gulpUtil.PluginError({
+            new gulpUtil.PluginError({
                 plugin: 'laravel-elixir-env',
                 message: 'Please include laravel-elixir-env after Laravel Elixir.'
             });
