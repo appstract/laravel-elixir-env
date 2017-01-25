@@ -17,10 +17,6 @@ module.exports = {
     },
 
     execute: function () {
-        //allow for casing to be consistent with documentation
-        if(typeof elixir !== "undefined" && typeof Elixir === "undefined"){
-            var Elixir = elixir;
-        }
         if(Elixir) {
             try {
                 if (fs.existsSync(config.path)) {
