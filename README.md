@@ -4,7 +4,7 @@
 
 Use .env variables in your Javascript files with Webpack in Laravel Elixir.
 
-[Read the story on Medium](https://medium.com/appstract/environment-variables-in-javascript-with-laravel-elixir-593df994d765)
+### [Read the story on Medium](https://medium.com/appstract/environment-variables-in-javascript-with-laravel-elixir-593df994d765)
 
 ## Installation
 
@@ -35,7 +35,7 @@ require('laravel-elixir-env');
 //...
 ```
 
-Now you can access your variables in all the scripts that are packaged with Webpack like so:
+Now you can access your variables in all the scripts that are packed with Webpack like so:
 
 ```javascript
 process.env.VAR_NAME
@@ -53,10 +53,21 @@ If you like this, please star on [GitHub](https://github.com/appstract/laravel-e
 
 Issues and Pull Requests welcome.
 
+## Contributing
+
+Contributions are welcome, [thanks to y'all](https://github.com/appstract/laravel-elixir-env/graphs/contributors) :)
+
+## About Appstract
+
+Appstract is a small team from The Netherlands. <3 Laravel, Vue and other awesome tools.
+
+## Buy Us A Beer
+
+Would be awesome if you would [buy us a beer](https://www.paypal.me/teamappstract/10)! Or [a lot of beer](https://www.patreon.com/appstract) :)
+
 ## License
 
 Laravel-elixir-env is licensed under [The MIT License (MIT)](LICENSE.md). 
-
 
 [npm-url]: https://www.npmjs.com/package/laravel-elixir-env
 [npm-image]: https://badge.fury.io/js/laravel-elixir-env.svg
