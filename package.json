@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-env",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Use .env variables in Javascript with Laravel Elixir",
   "main": "index.js",
   "repository": {
