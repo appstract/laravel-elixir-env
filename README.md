@@ -1,4 +1,4 @@
-# laravel-elixir-env
+# Laravel Elixir Env
 
 [![NPM version][npm-image]][npm-url]
 
