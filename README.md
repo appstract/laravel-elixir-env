@@ -30,9 +30,8 @@ Require the package in your gulpfile, after Elixir:
 
 ```javascript
 const elixir = require('laravel-elixir');
-//...
+
 require('laravel-elixir-env');
-//...
 ```
 
 Now you can access your variables in all the scripts that are packed with Webpack like so:
